@@ -1,10 +1,12 @@
- 
+//  imports
 import React,{useState,useEffect} from 'react';
 import Header from "./components/header"; 
 import axios from 'axios';
 import './App.css';
 import CharcterGrid from './components/CharactersGrid';
 import Search from './components/Search';
+
+// functional component
 const App = () => {
   const [items, setItems] = useState([]);
   const [isLoading,setIsLoading] = useState(true);
@@ -25,7 +27,7 @@ const App = () => {
        <Search getQuery={(q)=>setQuery(q)}/>
        <CharcterGrid isLoading = {isLoading} items = {items}/>
      </div>
-   )
- }
+   );
+ };
  
-export default App
+export default App;
